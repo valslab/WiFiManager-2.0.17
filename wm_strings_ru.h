@@ -96,7 +96,13 @@ const char HTTP_STYLE[]            PROGMEM = "<style>"
 "button,input[type='button'],input[type='submit']{cursor:pointer;border:0;background-color:#1fa3ec;color:#fff;line-height:2.4rem;font-size:1.2rem;width:100%}"
 "input[type='file']{border:1px solid #1fa3ec}"
 ".wrap {text-align:left;display:inline-block;min-width:260px;max-width:500px}"
-".chk-box input:checked~.box{background-color:#C038D3;}.chk-box input{position:absolute;opacity:0;cursor:pointer;}"
+//chk-box
+".chk-box{display:block;position:relative;padding-left:35px;padding-top:25px;margin-bottom:12px;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}"
+".box{position:absolute;top:25px;left:0;height:25px;width:25px;background-color:#eee;}"
+".chk-box .box:after{left:9px;top:5px;width:5px;height:10px;border:solid #fff;border-width: 0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);}.box:after{content:'';position:absolute;display:none;}"
+".chk-box input:checked~.box:after{display:block;}"
+".chk-box input:checked~.box{background-color:#C038D3;}"
+".chk-box input{position:absolute;opacity:0;cursor:pointer;}"
 // links
 "a{color:#000;font-weight:700;text-decoration:none}a:hover{color:#1fa3ec;text-decoration:underline}"
 // quality icons
