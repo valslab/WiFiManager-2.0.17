@@ -143,9 +143,10 @@ const char* WiFiManagerParameter::getCustomHTML() const {
 }
 // vals {
 void WiFiManagerParameter::setCustomHtml(const char* custom) {
-  if(!_id){
-    return;
-  }
+  // vals ?
+  // if(!_id){
+  //   return;
+  // }
   _customHTML = custom;
 }
 bool  WiFiManagerParameter::getIsSelectType() {
