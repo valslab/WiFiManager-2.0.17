@@ -207,6 +207,8 @@ class WiFiManagerParameter {
     WiFiManagerParameter(const char *id, const char *label, const char *defaultValue, int length);
     WiFiManagerParameter(const char *id, const char *label, const char *defaultValue, int length, const char *custom);
     WiFiManagerParameter(const char *id, const char *label, const char *defaultValue, int length, const char *custom, int labelPlacement);
+// vals
+    WiFiManagerParameter(const char *id, const char *custom, bool isSelect, const char* defaultValue, int length);
     ~WiFiManagerParameter();
     // WiFiManagerParameter& operator=(const WiFiManagerParameter& rhs);
 
@@ -218,7 +220,10 @@ class WiFiManagerParameter {
     int         getLabelPlacement() const;
     virtual const char *getCustomHTML() const;
     void        setValue(const char *defaultValue, int length);
-
+// vals {
+    void        setCustomHtml(const char* custom);
+    bool        getIsSelectType();
+// vals }
   protected:
     void init(const char *id, const char *label, const char *defaultValue, int length, const char *custom, int labelPlacement);
 
@@ -228,6 +233,8 @@ class WiFiManagerParameter {
     char       *_value;
     int         _length;
     int         _labelPlacement;
+// vals
+    bool        _isSelectType;
   
     const char *_customHTML;
     friend class WiFiManager;
