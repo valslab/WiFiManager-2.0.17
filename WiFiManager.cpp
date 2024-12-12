@@ -143,8 +143,8 @@ const char* WiFiManagerParameter::getCustomHTML() const {
 }
 // vals {
 void WiFiManagerParameter::setCustomHtml(const char* custom) {
-    if(!_id){
-      return;
+  if(!_id){
+    return;
   }
   _customHTML = custom;
 }
