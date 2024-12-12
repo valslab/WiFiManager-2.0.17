@@ -1,26 +1,27 @@
 /**
- * wm_strings_en.h
- * engligh strings for
+ * wm_strings_ru.h
+ * russuan strings for
  * WiFiManager, a library for the ESP8266/Arduino platform
  * for configuration of WiFi credentials using a Captive Portal
  *
  * @author Creator tzapu
  * @author tablatronix
+ * @translated vals
  * @version 0.0.0
  * @license MIT
  */
 
-#ifndef _WM_STRINGS_EN_H_
-#define _WM_STRINGS_EN_H_
+#ifndef _WM_STRINGS_RU_H_
+#define _WM_STRINGS_RU_H_
 
 
 #ifndef WIFI_MANAGER_OVERRIDE_STRINGS
 // !!! ABOVE WILL NOT WORK if you define in your sketch, must be build flag, if anyone one knows how to order includes to be able to do this it would be neat.. I have seen it done..
 
 // strings files must include a consts file!
-#include "wm_consts_en.h" // include constants, tokens, routes
+#include "wm_consts_ru.h" // include constants, tokens, routes
 
-const char WM_LANGUAGE[] PROGMEM = "en-US"; // i18n lang code
+const char WM_LANGUAGE[] PROGMEM = "ru-RU"; // i18n lang code
 
 const char HTTP_HEAD_START[]       PROGMEM = "<!DOCTYPE html>"
 "<html lang='en'><head>"
