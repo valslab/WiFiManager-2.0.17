@@ -24,7 +24,7 @@
 const char WM_LANGUAGE[] PROGMEM = "ru-RU"; // i18n lang code
 
 const char HTTP_HEAD_START[]       PROGMEM = "<!DOCTYPE html>"
-"<html lang='en'><head>"
+"<html lang='ru'><head>"
 "<meta name='format-detection' content='telephone=no'>"
 "<meta charset='UTF-8'>"
 "<meta  name='viewport' content='width=device-width,initial-scale=1,user-scalable=no'/>"
@@ -36,6 +36,7 @@ const char HTTP_SCRIPT[]           PROGMEM = "<script>function c(l){"
 "document.getElementById('p').disabled = !p;"
 "if(p)document.getElementById('p').focus();};"
 "function f() {var x = document.getElementById('p');x.type==='password'?x.type='text':x.type='password';}"
+"function extraConf() {var e=g('chbox');var d='none';if(e.checked){d='block'}g('extra_conf').style.display=d;}"
 "</script>"; // @todo add button states, disable on click , show ack , spinner etc
 
 const char HTTP_HEAD_END[]         PROGMEM = "</head><body class='{c}'><div class='wrap'>"; // {c} = _bodyclass
@@ -95,6 +96,7 @@ const char HTTP_STYLE[]            PROGMEM = "<style>"
 "button,input[type='button'],input[type='submit']{cursor:pointer;border:0;background-color:#1fa3ec;color:#fff;line-height:2.4rem;font-size:1.2rem;width:100%}"
 "input[type='file']{border:1px solid #1fa3ec}"
 ".wrap {text-align:left;display:inline-block;min-width:260px;max-width:500px}"
+".chk-box input:checked~.box{background-color:#C038D3;}.chk-box input{position:absolute;opacity:0;cursor:pointer;}"
 // links
 "a{color:#000;font-weight:700;text-decoration:none}a:hover{color:#1fa3ec;text-decoration:underline}"
 // quality icons
