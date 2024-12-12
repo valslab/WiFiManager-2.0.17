@@ -39,6 +39,19 @@ WiFiManagerParameter::WiFiManagerParameter(const char *custom) {
   _isSelectType   = false;
 }
 
+// vals {
+WiFiManagerParameter::WiFiManagerParameter(const char *id, const char *custom, bool selectType, const char *defaultValue, int length) {
+  _id             = id;
+  _label          = NULL;
+  _labelPlacement = WFM_LABEL_BEFORE;
+  _customHTML     = custom;
+  _length         = 20;
+  _value          = NULL;
+  _isSelectType   = selectType;
+  setValue(defaultValue, length);
+}
+// vals }
+
 WiFiManagerParameter::WiFiManagerParameter(const char *id, const char *label) {
   init(id, label, "", 0, "", WFM_LABEL_DEFAULT);
 }
@@ -66,19 +79,6 @@ void WiFiManagerParameter::init(const char *id, const char *label, const char *d
   _isSelectType   = false;
   setValue(defaultValue,length);
 }
-
-// vals {
-WiFiManagerParameter::WiFiManagerParameter(const char *id, const char *custom, bool selectType, const char *defaultValue, int length) {
-  _id             = id;
-  _label          = NULL;
-  _labelPlacement = WFM_LABEL_BEFORE;
-  _customHTML     = custom;
-  _length         = 20;
-  _value          = NULL;
-  _isSelectType   = selectType;
-  setValue(defaultValue, length);
-}
-// vals }
 
 WiFiManagerParameter::~WiFiManagerParameter() {
   if (_value != NULL) {
